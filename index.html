@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPIRE//X</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="loading">
+    <div class="loader-core"></div>
+    <h1>EMPIRE//X</h1>
+    <p>INITIALIZING CORPORATE WORLD...</p>
+</div>
+
+<header>
+    <div class="brand">
+        <span class="brand-mark">◆</span>
+        EMPIRE<span>//</span>X
+    </div>
+
+    <div class="top-status">
+        <span id="clock">DAY 1 • 08:00</span>
+        <span id="marketStatus">MARKET: STABLE</span>
+    </div>
+
+    <button id="saveBtn">SAVE</button>
+</header>
+
+<main>
+
+    <!-- WORLD -->
+
+    <section id="world">
+
+        <div class="sky"></div>
+
+        <div class="city">
+            <div class="building b1"></div>
+            <div class="building b2"></div>
+            <div class="building b3"></div>
+            <div class="building b4"></div>
+            <div class="building b5"></div>
+            <div class="building b6"></div>
+        </div>
+
+        <div class="road"></div>
+
+        <div class="hq">
+            <div class="hq-logo">EMPIRE//X</div>
+            <div class="hq-floor"></div>
+            <div class="hq-floor"></div>
+            <div class="hq-floor"></div>
+            <div class="hq-floor"></div>
+        </div>
+
+        <div id="player">
+            <div class="player-head"></div>
+            <div class="player-body"></div>
+        </div>
+
+        <div class="world-label">
+            <small>SECTOR 01</small>
+            <strong>CORPORATE DISTRICT</strong>
+        </div>
+
+        <div class="movement">
+            <button data-key="w">▲</button>
+            <div>
+                <button data-key="a">◀</button>
+                <button data-key="s">▼</button>
+                <button data-key="d">▶</button>
+            </div>
+        </div>
+
+        <div class="interaction">
+            <button id="interactBtn">INTERACT</button>
+        </div>
+
+    </section>
+
+
+    <!-- GAME HUD -->
+
+    <aside id="hud">
+
+        <div class="profile">
+            <div class="avatar">CEO</div>
+
+            <div>
+                <small>EXECUTIVE</small>
+                <h2 id="playerName">AYUSH</h2>
+                <div class="level">
+                    LEVEL <span id="level">1</span>
+                    <div class="xpbar">
+                        <i id="xpBar"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="money-card">
+            <small>AVAILABLE CAPITAL</small>
+            <strong id="money">₹10,00,000</strong>
+            <span id="income">+₹0 / day</span>
+        </div>
+
+
+        <nav>
+            <button class="nav active" data-page="overview">OVERVIEW</button>
+            <button class="nav" data-page="business">BUSINESS</button>
+            <button class="nav" data-page="market">MARKET</button>
+            <button class="nav" data-page="employees">EMPLOYEES</button>
+            <button class="nav" data-page="missions">MISSIONS</button>
+        </nav>
+
+
+        <section id="overview" class="page active">
+
+            <div class="stats">
+                <div>
+                    <small>COMPANY VALUE</small>
+                    <b id="companyValue">₹10,00,000</b>
+                </div>
+
+                <div>
+                    <small>REPUTATION</small>
+                    <b id="reputation">50%</b>
+                </div>
+
+                <div>
+                    <small>EMPLOYEES</small>
+                    <b id="employeeCount">0</b>
+                </div>
+            </div>
+
+            <div class="event-card">
+                <small>LATEST EVENT</small>
+                <h3 id="eventTitle">WELCOME, CEO</h3>
+                <p id="eventText">
+                    Your corporate empire begins today.
+                </p>
+            </div>
+
+            <div class="actions">
+                <button id="collectBtn">COLLECT DAILY PROFIT</button>
+                <button id="restBtn">ADVANCE DAY</button>
+            </div>
+
+        </section>
+
+
+        <section id="business" class="page">
+
+            <h2>BUSINESS PORTFOLIO</h2>
+
+            <div id="businessList"></div>
+
+        </section>
+
+
+        <section id="market" class="page">
+
+            <h2>GLOBAL MARKET</h2>
+
+            <div id="marketList"></div>
+
+            <div class="market-actions">
+                <button id="buyStock">BUY</button>
+                <button id="sellStock">SELL</button>
+            </div>
+
+            <p class="holding">
+                Holdings:
+                <span id="holding">0</span>
+            </p>
+
+        </section>
+
+
+        <section id="employees" class="page">
+
+            <h2>HUMAN CAPITAL</h2>
+
+            <div class="employee-summary">
+                Employees:
+                <strong id="employeeBig">0</strong>
+            </div>
+
+            <button id="hireBtn">HIRE EMPLOYEE — ₹25,000</button>
+
+            <div id="employeeList"></div>
+
+        </section>
+
+
+        <section id="missions" class="page">
+
+            <h2>CEO MISSIONS</h2>
+
+            <div id="missionList"></div>
+
+        </section>
+
+    </aside>
+
+</main>
+
+
+<div id="toast"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
